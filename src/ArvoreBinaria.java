@@ -23,10 +23,8 @@ public class ArvoreBinaria {
         if(aux == null) {
             return novoNo;
         } else if (novoNo.getConteudo() > aux.getConteudo()) {
-            novoNo.setAnterior(aux);
             aux.setDireita(inserirRecursivoOtimizado(aux.getDireita(), novoNo));
         } else {
-            novoNo.setAnterior(aux);
             aux.setEsquerda(inserirRecursivoOtimizado(aux.getEsquerda(), novoNo));
         }
         return aux;
